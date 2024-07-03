@@ -67,28 +67,30 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 20,
     },
-    flatListContent: {
-        justifyContent: 'center',
-    },
     columnWrapper: {
-        justifyContent: 'space-around',
+        justifyContent: 'flex-start',
         marginBottom: 10,
     },
     container: {
         borderColor: 'black',
         borderWidth: 1,
         borderRadius: 20,
-        paddingHorizontal: 30,
-        paddingVertical: 10,
+        paddingHorizontal: 18,
+        paddingVertical: 6,
         backgroundColor: '#f0f0f0',
-        flexWrap: 'wrap',
+        width: 110,
+        alignItems: 'center',
+
     },
     text: {
         fontSize: 16,
         color: '#000',
+        flexWrap: 'wrap',
+        maxWidth: 110,
     },
     item: {
         marginBottom: 10,
+        marginHorizontal: 10,
     },
 });
 
