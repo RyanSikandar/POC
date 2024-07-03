@@ -31,7 +31,7 @@ const App = () => {
 
       <View style={styles.container}>
         <Text style={styles.title}>Single Select</Text>
-        <SelectTag data={['CitrusBits', 'Systems Limited', 'Confiz', 'Google', 'Apple', 'SanFrancisco','asssssssaaaaaaaaaaaaaaaaaaaaa','shdjd','ada']} multiSelect={false} selectHandle={handleSelect} />
+        <SelectTag data={['CitrusBits', 'Systems Limited', 'Confizzzzz', 'Google', 'Apple', 'SanFrancisco', 'asssssssaaaaaaaaaaaaaaaaaaaaa', 'shdjd', 'ada']} multiSelect={false} selectHandle={handleSelect} />
       </View>
     </>
   );

@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         marginBottom: 10,
         flexWrap: 'wrap',
+
     },
     container: {
         borderColor: 'black',
@@ -84,12 +85,11 @@ const styles = StyleSheet.create({
         paddingVertical: 4,
         backgroundColor: '#f0f0f0',
         alignItems: 'center',
-        
+
     },
     text: {
         fontSize: 16,
         color: '#000',
-
         flexWrap: 'wrap',
     },
     item: {
