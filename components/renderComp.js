@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from "react-native";
 
-const SelectTag = ({ data, multiSelect = true }) => {
+const SelectTag = ({ data, multiSelect = true, selectHandle }) => {
     const [selectedItems, setSelected] = React.useState([]);
 
     const handleSelect = (item) => {
@@ -21,6 +21,10 @@ const SelectTag = ({ data, multiSelect = true }) => {
     const isSelected = (item) => {
         return selectedItems.includes(item);
     };
+
+    if (selectHandle) {
+        selectHandle(selectedItems);
+    }
 
     const renderItem = ({ item }) => {
         return (
@@ -46,7 +50,7 @@ const SelectTag = ({ data, multiSelect = true }) => {
             <Text style={styles.title}>Where would you like to work?</Text>
             <FlatList
                 data={data}
-                numColumns={2}
+                numColumns={3}
                 columnWrapperStyle={styles.columnWrapper}
                 renderItem={renderItem}
                 keyExtractor={(item) => item}
@@ -70,27 +74,27 @@ const styles = StyleSheet.create({
     columnWrapper: {
         justifyContent: 'flex-start',
         marginBottom: 10,
+        flexWrap: 'wrap',
     },
     container: {
         borderColor: 'black',
         borderWidth: 1,
         borderRadius: 20,
-        paddingHorizontal: 18,
-        paddingVertical: 6,
+        paddingHorizontal: 8,
+        paddingVertical: 4,
         backgroundColor: '#f0f0f0',
-        width: 110,
         alignItems: 'center',
-
+        
     },
     text: {
         fontSize: 16,
         color: '#000',
+
         flexWrap: 'wrap',
-        maxWidth: 110,
     },
     item: {
         marginBottom: 10,
-        marginHorizontal: 10,
+        marginRight: 8,
     },
 });
 

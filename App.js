@@ -4,6 +4,13 @@ import { View, Text, StyleSheet, Alert } from "react-native";
 import SelectView from "./components/SelectView_component";
 import SelectTag from './components/renderComp';
 
+const handleSelect = (selectedItems) => {
+  if (selectedItems.length === 0) {
+    return;
+  }
+  Alert.alert('Your choices', selectedItems.join(', '));
+}
+
 const App = () => {
   return (
     // <>
@@ -19,12 +26,12 @@ const App = () => {
     <>
       <View style={styles.container}>
         <Text style={styles.title}>Multi Select</Text>
-        <SelectTag data={['CitrusBits', 'Systems Limited', 'Confiz', 'Google', 'Apple']} multiSelect={true} />
+        <SelectTag data={['CitrusBits', 'Systems Limited', 'Confiz', 'Google', 'Apple', 'lahore']} multiSelect={true} selectHandle={handleSelect} />
       </View>
 
       <View style={styles.container}>
         <Text style={styles.title}>Single Select</Text>
-        <SelectTag data={['CitrusBits', 'Systems Limited', 'Confiz', 'Google', 'Apple']} multiSelect={false} />
+        <SelectTag data={['CitrusBits', 'Systems Limited', 'Confiz', 'Google', 'Apple', 'SanFrancisco','asssssssaaaaaaaaaaaaaaaaaaaaa','shdjd','ada']} multiSelect={false} selectHandle={handleSelect} />
       </View>
     </>
   );
