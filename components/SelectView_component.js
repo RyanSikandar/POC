@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Alert } from "react-native";
 
-const SelectView = ({ data, multiSelect = true, onSelect }) => {
+const SelectView = ({ data, multiSelect = true }) => {
     const [selectedItems, setSelected] = React.useState([]);
 
 
@@ -18,7 +18,6 @@ const SelectView = ({ data, multiSelect = true, onSelect }) => {
             newSelectedItems = selectedItems.includes(item) ? [] : [item];
         }
         setSelected(newSelectedItems);
-        onSelect(newSelectedItems);
     };
 
     const isSelected = (item) => {
@@ -27,13 +26,15 @@ const SelectView = ({ data, multiSelect = true, onSelect }) => {
 
     const renderItem = ({ item }) => {
         return (
-            <TouchableOpacity
+            <View
                 style={styles.item}
-                onPress={() => handleSelect(item)}
             >
                 <Text style={styles.itemText}>{item}</Text>
-                {isSelected(item) && <Text>✔</Text>}
-            </TouchableOpacity>
+                <TouchableOpacity style={styles.box} onPress={() => handleSelect(item)}
+                >
+                    {isSelected(item) && <View style={{ backgroundColor: 'black', flex: 1 }} />}
+                </TouchableOpacity>
+            </View>
         );
     }
 
@@ -60,7 +61,17 @@ const styles = StyleSheet.create({
         flex: 1,
         flexWrap: 'wrap',
         marginRight: 30,
+        color: '#000',
+        fontSize: 16,
     },
+    box: {
+        width: 20,
+        height: 20,
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderColor: 'black',
+        borderRadius: 5,
+    }
 });
 
 export default SelectView;
