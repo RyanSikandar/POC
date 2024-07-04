@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Text, View, Modal, TouchableWithoutFeedback, StyleSheet, Image } from "react-native";
 import { icons } from "../assets";
+
 function ModalTester() {
     const [isModalVisible, setModalVisible] = useState(false);
 
@@ -13,7 +14,7 @@ function ModalTester() {
             <Button title="Show modal" onPress={toggleModal} />
 
             <Modal
-                transparent={true}
+                transparent
                 visible={isModalVisible}
                 animationType="fade"
                 onRequestClose={toggleModal}
@@ -36,32 +37,26 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backgroundColor: '#0000004D',
     },
     modalContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'white',
-        height: 242,
-        width: 226,
+        backgroundColor: '#FFFFFFCC',
+        width: '60%',
         padding: 32,
         borderRadius: 16,
-        borderColor: 'black',
-        shadowColor: 'black',
-        elevation: 5,
     },
     text: {
         fontWeight: '800',
         color: 'black',
-
         fontSize: 40,
         lineHeight: 48,
         letterSpacing: 0.5,
         textAlign: 'center',
-        paddingHorizontal: 16,
     },
     image:
-        { width: 80, height: 78, marginBottom: 10 }
+        { width: 80, height: 80, marginBottom: 10 }
 
 });
 
