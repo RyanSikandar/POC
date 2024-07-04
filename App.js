@@ -2,7 +2,7 @@ import { SelectedScreen } from './selectedScreen';
 import React from "react";
 import { View, Text, StyleSheet, Alert } from "react-native";
 import SelectView from "./components/SelectView_component";
-import SelectTag from './components/renderComp';
+import SelectTag from './components/SelectTag';
 
 const handleSelect = (selectedItems) => {
   if (selectedItems.length === 0) {
@@ -31,7 +31,7 @@ const App = () => {
 
       <View style={styles.container}>
         <Text style={styles.title}>Single Select</Text>
-        <SelectTag data={['CitrusBits', 'Systems Limited', 'Confizzzzz', 'Google', 'Apple', 'SanFrancisco', 'asssssssaaaaaaaaaaaaaaaaaaaaa', 'shdjd', 'ada']} multiSelect={false} selectHandle={handleSelect} />
+        <SelectTag data={['CitrusBits', 'Systems Limited', 'Confizzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz dgfdfgdfg dfgdfg dfgdfgdfg dfgdfg', 'New Zealand', 'Google', 'Apple', 'SanFrancisco', 'United States of America', 'shdjd', 'ada', "Pakistan", "India"]} multiSelect={false} selectHandle={handleSelect} />
       </View>
     </>
   );

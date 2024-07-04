@@ -15,16 +15,13 @@ const SelectTag = ({ data, multiSelect = true, selectHandle }) => {
         } else {
             newSelectedItems = selectedItems.includes(item) ? [] : [item];
         }
+
         setSelected(newSelectedItems);
     };
 
     const isSelected = (item) => {
         return selectedItems.includes(item);
     };
-
-    if (selectHandle) {
-        selectHandle(selectedItems);
-    }
 
     const renderItem = ({ item }) => {
         return (
@@ -73,7 +70,7 @@ const styles = StyleSheet.create({
     },
     columnWrapper: {
         justifyContent: 'flex-start',
-        marginBottom: 10,
+        marginBottom: 6,
         flexWrap: 'wrap',
 
     },
@@ -90,7 +87,6 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 16,
         color: '#000',
-        flexWrap: 'wrap',
     },
     item: {
         marginBottom: 10,
