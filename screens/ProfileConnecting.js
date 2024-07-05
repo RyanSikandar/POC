@@ -1,26 +1,36 @@
 import React from "react";
-import { View, Text, StyleSheet, Alert, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import Carousel from "../components/Carousel";
 import Profile from "../components/Profile/Profile";
 import Organization from "../components/Organization";
+import Interests from "../components/Interests";
+import Prompt from "../components/Prompt";
+import Info from "../components/Info";
 
 const ProfileConnecting = () => {
     return (
-        <ScrollView style={styles.container}
-            contentContainerStyle={{
-                flexGrow: 1,
-            }}>
-            <Carousel />
-            <Profile />
-            <Organization />
-        </ScrollView>
+        <View style={styles.wrapper}>
+            <ScrollView>
+                <Carousel />
+                <View style={styles.contentWrapper}>
+                    <Profile />
+                    <Organization />
+                    <Interests />
+                    <Prompt />
+                    <Info />
+                </View>
+            </ScrollView>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'white',
-        marginHorizontal: 16
+    wrapper: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
+    contentWrapper: {
+        marginHorizontal: 16,
     },
 });
 

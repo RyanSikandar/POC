@@ -1,6 +1,8 @@
 import React from "react";
-import { ScrollView, Text, View } from "react-native";
+import { Dimensions, ScrollView, Text, View } from "react-native";
 import { StyleSheet } from "react-native";
+
+const {height: ScreenHeight, width: ScreenWidth} = Dimensions.get('screen');
 
 const Carousel = () => {
     return (
@@ -12,8 +14,8 @@ const Carousel = () => {
 
 const styles = StyleSheet.create({
     Carousel: {
-        height: '40%',
-        width: '100%',
+        height: ScreenHeight * 0.30,
+        width: ScreenWidth,
         backgroundColor: '#D9D9D9',
         position: 'relative',
     },

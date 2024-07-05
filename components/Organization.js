@@ -4,29 +4,34 @@ import TagComponent from "./TagComponent";
 
 const Organization = () => {
     return (
-        <View style={{
-            flexDirection: 'column',
-            marginTop: 17,
-        }}>
-            <Text style={{
-                marginBottom: 16,
-            }}>Organization Affiliation</Text>
-            <TagComponent text={'Program: Graduate'} customStyles={{
-                container: {
-                    marginBottom: 16,
-                    paddingHorizontal: 6,
-                    paddingVertical: 16,
-                    borderRadius: 8,
-                },
-                text:{}
-            }
-            } />
-            <TagComponent text={'Chapter: Sigma Gamma Rho'} />
-            <TagComponent text={'Pledged Date: 2023 Fall'} />
-            <TagComponent text={'Lorem Ipsum'} />
-            <TagComponent text={'Other Chapter'} />
-
+        <View style={styles.wrapper}>
+            <Text style={styles.mainText}>Organization Affiliation</Text>
+            <TagComponent text={'Program: Graduate'} customStyles={styles} />
+            <TagComponent text={'Chapter: Sigma Gamma Rho'} customStyles={styles} />
+            <TagComponent text={'Pledged Date: 2023 Fall'} customStyles={styles} />
+            <TagComponent text={'Lorem Ipsum'} customStyles={styles} />
+            <TagComponent text={'Other Chapter'} customStyles={styles} />
         </View>)
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+        marginBottom: 16,
+        paddingHorizontal: 16,
+        paddingVertical: 16,
+        borderRadius: 8,
+    },
+    wrapper: {
+        flexDirection: 'column',
+        marginTop: 17,
+        borderBottomColor: '#0000001A',
+        borderBottomWidth: 1,
+        paddingBottom: 17,
+    },
+    mainText: {
+        marginBottom: 16,
+    }
+});
 
 export default Organization;

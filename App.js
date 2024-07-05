@@ -40,12 +40,9 @@ const App = () => {
     //   </View>
     // </>
     //<ModalTester/>
-    <View style={{
-      flex: 1
-    }}>
+    
 
       <ProfileConnecting />
-    </View>
 
   );
 };

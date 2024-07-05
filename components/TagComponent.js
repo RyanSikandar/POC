@@ -13,7 +13,7 @@ const TagComponent = ({ text, customStyles }) => {
     };
 
     return (
-        <View style={[containerStyles, {textAlign:'left' }]}>
+        <View style={[containerStyles, { textAlign: 'left' }]}>
             <Text style={textStyles}>{text}</Text>
         </View>
     );
@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
         paddingVertical: 4,
         backgroundColor: '#f0f0f0',
-
     },
     text: {
         fontSize: 16,
