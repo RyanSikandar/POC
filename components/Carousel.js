@@ -18,10 +18,10 @@ const Carousel = () => {
             showsHorizontalScrollIndicator={false}
             pagingEnabled
             style={styles.carousel}>
-            {carouselItems.map(item => (
+            {carouselItems.map((item, index) => (
                 <View key={item.id} style={styles.carouselItem}>
                     <Text style={styles.carouselText}>{item.text}</Text>
-                    <Text style={styles.Number}>{item.id}/{carouselItems.length}</Text>
+                    <Text style={styles.Number}>{index + 1}/{carouselItems.length}</Text>
                 </View>
             ))}
         </ScrollView>
