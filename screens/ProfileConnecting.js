@@ -6,6 +6,7 @@ import Organization from "../components/Organization";
 import Interests from "../components/Interests";
 import Prompt from "../components/Prompt";
 import Info from "../components/Info";
+import Traits from "../components/Traits";
 
 const ProfileConnecting = () => {
     return (
@@ -18,6 +19,7 @@ const ProfileConnecting = () => {
                     <Interests />
                     <Prompt />
                     <Info />
+                    <Traits/>
                 </View>
             </ScrollView>
         </View>
