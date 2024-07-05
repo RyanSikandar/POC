@@ -11,6 +11,7 @@ export default function Traits() {
             alignItems: 'center',
             padding: 10,
             marginTop: 17,
+            marginBottom:117
         }}>
             <Box heading={"Height"} trait={"5' 11\""} />
             <Box heading={"Religion"} trait={"Islam"}/>
