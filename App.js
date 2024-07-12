@@ -6,12 +6,12 @@ import SelectTag from './components/SelectTag';
 import ModalTester from './modals/MatchModal';
 import ProfileConnecting from './screens/ProfileConnecting';
 
-const handleSelect = (selectedItems) => {
-  if (selectedItems.length === 0) {
-    return;
-  }
-  Alert.alert('Your choices', selectedItems.join(', '));
-}
+// const handleSelect = (selectedItems) => {
+//   if (selectedItems.length === 0) {
+//     return;
+//   }
+//   Alert.alert('Your choices', selectedItems.join(', '));
+// }
 
 const App = () => {
   return (
@@ -40,9 +40,9 @@ const App = () => {
     //   </View>
     // </>
     //<ModalTester/>
-    
 
-      <ProfileConnecting />
+
+    <ProfileConnecting />
 
   );
 };
